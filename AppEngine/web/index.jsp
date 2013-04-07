@@ -7,10 +7,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>AppEngine</title>
-  </head>
-  <body>
-     <h1>AppEngine</h1>
-  </body>
+</head>
+<body>
+<h1>AppEngine</h1>
+
+<form action="addUser" method="POST">
+    <p>
+        Pr&eacute;nom :<input type="text" name="prenom"> <br>
+        Nom &nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" name="nom"><br>
+        <input type="submit" name="add">
+    </p>
+</form>
+</body>
 </html>

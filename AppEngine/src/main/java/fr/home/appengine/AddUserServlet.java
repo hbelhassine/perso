@@ -15,15 +15,16 @@ import java.util.logging.Logger;
 public class AddUserServlet extends HttpServlet {
     private final Logger LOGGER = Logger.getLogger(AddUserServlet.class.getName());
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String prenom = (String) request.getAttribute("prenom");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String prenom = (String) request.getParameter("prenom");
         LOGGER.info("Prenom : " + prenom);
-        String nom = (String) request.getAttribute("nom");
-        LOGGER.info("Nom " + nom);
+        String nom = (String) request.getParameter("nom");
+        LOGGER.info("Nom : " + nom);
 
+        response.getOutputStream().print("User <h1>" + nom + "</h1> Added");
     }
 }
