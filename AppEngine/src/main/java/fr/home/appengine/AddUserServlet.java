@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Logger;
 
 /**
@@ -26,5 +27,8 @@ public class AddUserServlet extends HttpServlet {
         LOGGER.info("Nom : " + nom);
 
         response.getOutputStream().print("User <h1>" + nom + "</h1> Added");
+
+        java.util.ArrayList<String> list =  new ArrayList<String>();
+        //list.stream().allMatch((String) -> String != null )
     }
 }
